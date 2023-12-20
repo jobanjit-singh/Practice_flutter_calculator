@@ -1,6 +1,6 @@
-import 'package:calculator/Components/ButtonCustom.dart';
+import 'package:calculator/Widgets/ButtonCustom.dart';
 import 'package:flutter/material.dart';
-import 'package:calculator/Components/InputField.dart';
+import 'package:calculator/Widgets/InputField.dart';
 
 class HomeView extends StatefulWidget {
   @override
