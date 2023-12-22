@@ -8,6 +8,9 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeView extends State<HomeView> {
+  late var fieldOne = TextEditingController(text: "");
+  late var fieldTwo = TextEditingController(text: "");
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,13 +34,14 @@ class _HomeView extends State<HomeView> {
                 const SizedBox(
                   height: 10,
                 ),
-                const InputField(
+                InputField(
                   hintText: "Enter the first number",
+                  c: fieldOne,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const InputField(hintText: "Enter the second number"),
+                InputField(hintText: "Enter the second number", c: fieldTwo),
                 const SizedBox(
                   height: 10,
                 ),
@@ -61,29 +65,101 @@ class _HomeView extends State<HomeView> {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  child: const Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 8.0,
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ButtonCustom(value: "1"),
-                      ButtonCustom(value: "2"),
-                      ButtonCustom(value: "3"),
-                      ButtonCustom(value: "+"),
-                      ButtonCustom(value: "4"),
-                      ButtonCustom(value: "5"),
-                      ButtonCustom(value: "6"),
-                      ButtonCustom(value: "-"),
-                      ButtonCustom(value: "7"),
-                      ButtonCustom(value: "8"),
-                      ButtonCustom(value: "9"),
-                      ButtonCustom(value: "*"),
-                      ButtonCustom(value: "0"),
-                      ButtonCustom(value: "="),
-                      ButtonCustom(value: "C"),
-                      ButtonCustom(value: "/"),
+                      ButtonCustom(
+                        value: "1",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "2",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "3",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "+",
+                        c: fieldOne,
+                      ),
                     ],
                   ),
-                )
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ButtonCustom(
+                        value: "4",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "5",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "6",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "-",
+                        c: fieldOne,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ButtonCustom(
+                        value: "7",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "8",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "9",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "*",
+                        c: fieldOne,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ButtonCustom(
+                        value: "0",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "=",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "C",
+                        c: fieldOne,
+                      ),
+                      ButtonCustom(
+                        value: "/",
+                        c: fieldOne,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
