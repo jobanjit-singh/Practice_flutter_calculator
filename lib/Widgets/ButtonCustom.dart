@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 
 class ButtonCustom extends StatefulWidget {
   final String value;
-  final TextEditingController c;
+  final TextEditingController c1, c2;
+  final FocusNode f1, f2;
   ButtonCustom({
     Key? key,
     required this.value,
-    required this.c,
+    required this.c1,
+    required this.c2,
+    required this.f1,
+    required this.f2,
   }) : super(key: key);
 
   State<ButtonCustom> createState() => _ButtonCustom();
@@ -24,9 +28,14 @@ class _ButtonCustom extends State<ButtonCustom> {
                 } else if (widget.value == "*") {
                 } else if (widget.value == "/") {
                 } else if (widget.value == "C") {
-                  widget.c.clear();
+                  widget.c1.clear();
+                  widget.c2.clear();
                 } else {
-                  widget.c.text += widget.value;
+                  if (widget.f1.hasFocus) {
+                    widget.c1.text += widget.value;
+                  } else {
+                    widget.c2.text += widget.value;
+                  }
                 }
               })
             },

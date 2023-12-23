@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 class InputField extends StatefulWidget {
   final String hintText;
   final TextEditingController c;
-  const InputField({Key? key, required this.hintText, required this.c})
+  final FocusNode focusNode;
+  const InputField(
+      {Key? key,
+      required this.hintText,
+      required this.c,
+      required this.focusNode})
       : super(key: key);
   @override
   State<InputField> createState() => _InputField();
@@ -33,6 +38,7 @@ class _InputField extends State<InputField> {
       readOnly: true,
       showCursor: true,
       controller: widget.c,
+      focusNode: widget.focusNode,
     ));
   }
 }

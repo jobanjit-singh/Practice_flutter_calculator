@@ -11,6 +11,9 @@ class _HomeView extends State<HomeView> {
   late var fieldOne = TextEditingController(text: "");
   late var fieldTwo = TextEditingController(text: "");
 
+  late var focusNodeOne = FocusNode();
+  late var focusNodeTwo = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,11 +40,16 @@ class _HomeView extends State<HomeView> {
                 InputField(
                   hintText: "Enter the first number",
                   c: fieldOne,
+                  focusNode: focusNodeOne,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                InputField(hintText: "Enter the second number", c: fieldTwo),
+                InputField(
+                  hintText: "Enter the second number",
+                  c: fieldTwo,
+                  focusNode: focusNodeTwo,
+                ),
                 const SizedBox(
                   height: 10,
                 ),
@@ -71,19 +79,31 @@ class _HomeView extends State<HomeView> {
                     children: [
                       ButtonCustom(
                         value: "1",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "2",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "3",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "+",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                     ],
                   ),
@@ -95,19 +115,31 @@ class _HomeView extends State<HomeView> {
                     children: [
                       ButtonCustom(
                         value: "4",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "5",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "6",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "-",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                     ],
                   ),
@@ -119,19 +151,31 @@ class _HomeView extends State<HomeView> {
                     children: [
                       ButtonCustom(
                         value: "7",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "8",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "9",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "*",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                     ],
                   ),
@@ -143,19 +187,31 @@ class _HomeView extends State<HomeView> {
                     children: [
                       ButtonCustom(
                         value: "0",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "=",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "C",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                       ButtonCustom(
                         value: "/",
-                        c: fieldOne,
+                        c1: fieldOne,
+                        c2: fieldTwo,
+                        f1: focusNodeOne,
+                        f2: focusNodeTwo,
                       ),
                     ],
                   ),
