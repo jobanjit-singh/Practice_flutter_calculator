@@ -14,6 +14,14 @@ class _HomeView extends State<HomeView> {
   late var focusNodeOne = FocusNode();
   late var focusNodeTwo = FocusNode();
 
+  late String result = '';
+
+  changeResult(String res) {
+    setState(() {
+      result = res;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +30,7 @@ class _HomeView extends State<HomeView> {
         backgroundColor: Colors.white70,
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -59,9 +67,9 @@ class _HomeView extends State<HomeView> {
                     color: Colors.amberAccent,
                     borderRadius: BorderRadius.all(Radius.circular(20.0)),
                   ),
-                  child: const Text(
-                    "0",
-                    style: TextStyle(
+                  child: Text(
+                    result,
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 28,
                     ),
@@ -83,6 +91,7 @@ class _HomeView extends State<HomeView> {
                         c2: fieldTwo,
                         f1: focusNodeOne,
                         f2: focusNodeTwo,
+                        result: changeResult,
                       ),
                       ButtonCustom(
                         value: "2",
@@ -90,6 +99,7 @@ class _HomeView extends State<HomeView> {
                         c2: fieldTwo,
                         f1: focusNodeOne,
                         f2: focusNodeTwo,
+                        result: changeResult,
                       ),
                       ButtonCustom(
                         value: "3",
@@ -97,6 +107,7 @@ class _HomeView extends State<HomeView> {
                         c2: fieldTwo,
                         f1: focusNodeOne,
                         f2: focusNodeTwo,
+                        result: changeResult,
                       ),
                       ButtonCustom(
                         value: "+",
@@ -104,6 +115,7 @@ class _HomeView extends State<HomeView> {
                         c2: fieldTwo,
                         f1: focusNodeOne,
                         f2: focusNodeTwo,
+                        result: changeResult,
                       ),
                     ],
                   ),
@@ -114,33 +126,33 @@ class _HomeView extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ButtonCustom(
-                        value: "4",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "4",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "5",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "5",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "6",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "6",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "-",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "-",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                     ],
                   ),
                 ),
@@ -150,33 +162,33 @@ class _HomeView extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ButtonCustom(
-                        value: "7",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "7",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "8",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "8",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "9",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "9",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "*",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "*",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                     ],
                   ),
                 ),
@@ -185,34 +197,30 @@ class _HomeView extends State<HomeView> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ButtonCustom(
-                        value: "0",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
+                      const SizedBox(
+                        width: 65,
                       ),
                       ButtonCustom(
-                        value: "=",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "0",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "C",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "C",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                       ButtonCustom(
-                        value: "/",
-                        c1: fieldOne,
-                        c2: fieldTwo,
-                        f1: focusNodeOne,
-                        f2: focusNodeTwo,
-                      ),
+                          value: "/",
+                          c1: fieldOne,
+                          c2: fieldTwo,
+                          f1: focusNodeOne,
+                          f2: focusNodeTwo,
+                          result: changeResult),
                     ],
                   ),
                 ),
